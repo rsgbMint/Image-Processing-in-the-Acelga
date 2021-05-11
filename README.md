@@ -1,2 +1,2 @@
-# Image Proccessing in the Acelga
+# Image Processing in the Acelga
 Documentación y scripts en Python para el cultivo y crecimiento de la acelga
