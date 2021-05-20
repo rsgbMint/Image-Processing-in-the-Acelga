@@ -1,0 +1,97 @@
+\documentclass[12pt,a4paper]{book} 
+\usepackage[utf8]{inputenc} %utf8 acepta entregas ',ñ,etc
+                            %inputec: tipo de entrada  
+\usepackage[spanish]{babel} %estructuras en español
+%modo matematio, fondos y simbols
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%graficos
+\usepackage{tikz}
+\usetikzlibrary {graphs}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\definecolor{azul}{rgb}{0,0,255}
+\usepackage{setspace}
+\usepackage[left=2.54 cm, right=2.54 cm, top=2.54 cm, bottom=2.54 cm]{geometry}
+
+%ESTILO DE PAGINA
+%E para paginas pares
+%O para paginas impares
+%L para el lado izquierdo
+%C para el centro
+%R para el lado derecho
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{UNSAAC 2020-I}
+\fancyhead[RE,LO]{CIRCAE}
+\fancyfoot[CE,CO]{\leftmark}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1.5pt}
+
+\begin{document}
+
+\include{caratula}
+\section{Procesamiento de Imagen Digital}
+\subsection{Definición de Imagen Digital}
+La imagen se puede definir como una función bidimencional \textit{f(x,y)}, donde las coordenadas espaciales son representadas por \textit{(x,y)} y \textit{f(x,y)} que manifiestan el dominio de la intensidad o nivel de gris de la imagen en ese punto (x,y), la imgen digital son cantidades discretas y finitas y hacen uso de los bits \textit{(unidad pequeña de informacion) en \textbf{0 y 1}}.\\
+
+Por lo tanto, \textit{f(x,y)} toma los siguientes valores:
+\begin{itemize}
+     \item x $\in$ \textit{[0, h-1]}, donde h es la altura de la imagen
+     \item y $\in$ \textit{[0, w-1]}, donde w es el ancho de la imgen
+     \item f(x,y) $\in$ \textit{[0, L-1]}, donde L=256 (para una imagen de 8 bits)
+\end{itemize}
+
+Una imagen digital está compuesta de un número finito de elementos, el cual representan un valor y ubicación. A estos elementos se les conoce elementales de la imagen o \textit{pixels}.\\
+El procesamiento de imagen digital tiene el objetivo de mejorar la calidad o facilitar la búsqueda de información, haciendo uso de un ordenador digital (computadora) y métodos digitales.\\
+Tipos de imagen digital:
+   \begin{itemize}
+     \item Imagenes por mapas de bits; formados por puntos llamados \textit{pixels}
+     \item Imagen vectorial; imagenes constituidos por trazos geometricos definidos (funciones matemáticas), que determinan sus caracteristicas  
+   \end{itemize}    
+
+Un modelo ideal usado en el proceso computarizado son: 
+\begin{enumerate}
+   \item [\fbox{1.}]{\em Proceso de bajo nivel:}\\
+       Consiste en la reducción el ruido, mejora del contraste y nitidez de la imagen.\\ 
+       
+              %falta insertar cuadro
+       \begin{center}
+        \fbox{imagen}$ \longrightarrow$ \fbox{imagen}
+      
+       \end{center}
+       
+   \item [\fbox{2.}]{\em Proceso de bajo nivel:}
+   \\ Implica la segmentación donde se describira los objetos para poder reducirlos a un formulario adecuado para el procesamiento informático y reconocimiento de objetos individuales.
+   
+   % (entradas son generalmente imágenes pero la salida son atributos extraidos de la imagen como bordes, contornos, y la identidad de los objetos individuales)
+   
+   \item [\fbox{3.}]{\em Proceso de bajo nivel:}\\
+  Se da sentido al conjunto de objetos reconocidos, como en análisis de imágenes y realizar las funciones cognitivas normalmente asociado con la visión humana.
+\end{enumerate}
+\newpage
+\subsection{Imagenes Digitales a Color}
+La imagen digital a color de definir de igual manera donde representa tres funciones \textbf{Red, Green y Blue (RGB)} (Rojo, Verde, Azul) estos valores se definen \textit{f(x,y)} de igual manera para imagenes digitales en escala de grises.\\
+La de notación de estas funciones es: \textit{fR(x,y)}, \textit{fG(x,y)} y \textit{fB(x,y)}, el dominio de la intensidad varia desde \textbf{\textit{0 (negro)}} hasta \textbf{\textit{255 (blanco)}}, la combinación dependera de que se esta formulando para el procesamiento de imagen.
+ 
+   
+\vspace{4mm}
+\begin{center}
+\tikz {
+       \begin{scope}[transparency group]
+           \begin{scope}[blend mode=screen]
+              \fill[red!90!black] ( 90:.6) circle (1);
+              \fill[green!80!black] (210:.6) circle (1);
+              \fill[blue!90!black] (330:.6) circle (1);
+           
+           \end{scope}
+       \end{scope}
+}
+       
+\end{center}
+
+
+\end{document}
