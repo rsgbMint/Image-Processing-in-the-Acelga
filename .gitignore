@@ -1,0 +1,35 @@
+# Compiled class file
+*.class
+
+# BlueJ files
+*.ctxt
+
+# Package files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.workspace
+
+# virtual machine crash logs
+hs_err_pid*
+
+# Tex files
+*.aux
+*.log
+*.synctex.gz
+*.xdv
+*.fdb_latexmk
+*.fls
+*.pdf
+
+# vscode files
+*.code-workspace
+*.json
+
+# C++ resource files
+*.exe
+
+# images
